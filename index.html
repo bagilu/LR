@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>林榮讀書館｜首頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="林榮讀書館，一座節奏緩慢的讀書館，收藏老書與新書，提供閱讀空間、數位教材與文創小物。" />
+
+  <style>
+    /* 基本設定 */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
+        "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background-color: #f6f1e7;
+      color: #3b2f2f;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 頂部導覽列 */
+    header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background-color: #f6f1e7;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    nav li {
+      white-space: nowrap;
+    }
+
+    /* 主要內容區 */
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+      min-width: 280px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      letter-spacing: 0.3em;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      margin-bottom: 24px;
+      color: #6b5544;
+    }
+
+    .hero-text p {
+      margin: 0 0 1em;
+      text-align: justify;
+    }
+
+    .hero-image {
+      flex: 1 1 320px;
+      min-width: 260px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    /* 小標註解文字 */
+    .note {
+      font-size: 13px;
+      color: #8a7462;
+      margin-top: 12px;
+    }
+
+    /* 頁尾 */
+    footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 12px;
+      color: #8a7462;
+      padding: 16px 20px 24px;
+      text-align: center;
+    }
+
+    /* RWD 調整 */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">林榮讀書館</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">首頁 Home</a></li>
+          <li><a href="product.html">商品 Product</a></li>
+          <li><a href="knowledge.html">知識分享 Knowledge</a></li>
+          <li><a href="aboutme.html">關於我 About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首頁主要內容 -->
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="hero-title">林榮讀書館</h1>
+        <div class="hero-subtitle">一座節奏緩慢的讀書館。</div>
+
+        <p>
+          館內收藏自 1970 年代而來的老書，也陳列著剛出版的新作。主題以科學、歷史、文學與小說為主，多半是館主個人的偏好，卻也願意在這個小小空間裡與大家分享。
+        </p>
+        <p>
+          館主是一位退休的大學老師。離開教室之後，仍想與書同在，也希望能讓知識在生活中延續價值。於是把家中一樓整理成一處可共享的閱讀空間，備有簡單茶水，酌收座位費，讓人能在此靜下心來讀一本書、想一件事。
+        </p>
+        <p>
+          同時，也將過往教學與研究的養分轉化為數位教材與文創作品，讓閱讀與日常交會，生出一些細微卻令人愉悅的靈感。
+        </p>
+        <p>
+          若你喜歡書，也喜歡靜靜地待上一段時間，這裡或許能成為你的片刻歇所。願你在林榮讀書館，遇見適合自己的文字與故事。
+        </p>
+
+        <p class="note">
+          ※ 本網站為個人讀書空間的簡介頁，座位與實體營業資訊以現場公告為準。
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="pic/01-01.jpg" alt="林榮讀書館的書架與木桌照片" />
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    © <span id="year"></span> 林榮讀書館 Lin Rong Reading Room. All rights reserved.
+  </footer>
+
+  <script>
+    // 自動帶入年份（可有可無）
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
