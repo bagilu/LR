@@ -5,190 +5,7 @@
   <title>林榮讀書館｜商品列表</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="林榮讀書館商品頁，包含舊書、新書與文創小物的卡片式陳列。" />
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
-        "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background-color: #f6f1e7;
-      color: #3b2f2f;
-      line-height: 1.8;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* 頂部導覽列 */
-    header {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      background-color: #f6f1e7;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav-container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 20px;
-      letter-spacing: 0.2em;
-      font-weight: 600;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-      font-size: 14px;
-    }
-
-    nav li {
-      white-space: nowrap;
-    }
-
-    /* 主內容區 */
-    main {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
-    .page-title {
-      font-size: 26px;
-      letter-spacing: 0.2em;
-      margin-bottom: 6px;
-    }
-
-    .page-subtitle {
-      font-size: 15px;
-      color: #6b5544;
-      margin-bottom: 30px;
-    }
-
-    /* 商品卡片區塊 */
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr; /* 手機：1 欄 */
-      gap: 24px;
-    }
-
-    @media (min-width: 640px) {
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 小螢幕：2 欄 */
-      }
-    }
-
-    @media (min-width: 920px) {
-      .product-grid {
-        grid-template-columns: repeat(3, 1fr); /* 中型螢幕：3 欄 */
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .product-grid {
-        grid-template-columns: repeat(4, 1fr); /* 寬螢幕：最多 4 欄 */
-      }
-    }
-
-    .product-card {
-      background-color: #fbf7f0;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-image-wrapper {
-      width: 100%;
-      aspect-ratio: 4 / 3; /* 固定比例，方便版面穩定 */
-      overflow: hidden;
-    }
-
-    .product-image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .product-body {
-      padding: 14px 14px 16px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .product-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      line-height: 1.4;
-    }
-
-    .product-desc {
-      font-size: 13px;
-      color: #6b5544;
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    .product-meta {
-      margin-top: auto;
-      font-size: 12px;
-      color: #a08b78;
-    }
-
-    /* 頁尾 */
-    footer {
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      font-size: 12px;
-      color: #8a7462;
-      padding: 16px 20px 24px;
-      text-align: center;
-    }
-
-    /* RWD 導覽列調整 */
-    @media (max-width: 768px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-
-      .page-title {
-        font-size: 22px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- 導覽列 -->
@@ -210,119 +27,119 @@
   <main>
     <h1 class="page-title">商品一覽</h1>
     <p class="page-subtitle">
-      書與文創小物。
+      舊書、新書與文創小物，會逐步增加。以下為示意卡片，老師日後可自由替換圖片與文字。
     </p>
 
-    <section class="product-grid">
+    <section class="card-grid">
       <!-- 商品 1 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 1" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 1" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">2026南北半球對照世界地圖海報</h2>
-          <p class="product-desc">
-            2026年曆，南北半球對照的世界地圖。A3直式海報。銅版紙。售價150元。
+        <div class="card-body">
+          <h2 class="card-title">1970年代散步讀本</h2>
+          <p class="card-desc">
+            精選七〇年代散文與短篇故事，紙張泛黃卻十分耐讀，適合慢慢翻閱。
           </p>
-          <div class="product-meta">舊書｜示意品項</div>
+          <div class="card-meta">舊書｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 2 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 2" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 2" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">老書封面筆記本</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">老書封面筆記本</h2>
+          <p class="card-desc">
             以舊書視覺為靈感製作的空白筆記本，適合寫下閱讀筆記與生活片段。
           </p>
-          <div class="product-meta">文創小物｜示意品項</div>
+          <div class="card-meta">文創小物｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 3 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 3" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 3" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">小城科學選讀集</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">小城科學選讀集</h2>
+          <p class="card-desc">
             以平實文字介紹經典科學概念，適合對世界運作方式感到好奇的讀者。
           </p>
-          <div class="product-meta">新書｜示意品項</div>
+          <div class="card-meta">新書｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 4 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 4" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 4" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">閱讀時光木質書籤</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">閱讀時光木質書籤</h2>
+          <p class="card-desc">
             小量製作的木質書籤，保留木紋與手感，陪你標記每一次暫時合上的頁面。
           </p>
-          <div class="product-meta">文創小物｜示意品項</div>
+          <div class="card-meta">文創小物｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 5 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 5" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 5" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">舊書香味小說集</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">舊書香味小說集</h2>
+          <p class="card-desc">
             收錄數本保存良好的舊版小說，本數有限，適合喜歡老版排版的讀者。
           </p>
-          <div class="product-meta">舊書｜示意品項</div>
+          <div class="card-meta">舊書｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 6 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 6" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 6" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">歷史小講堂讀本</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">歷史小講堂讀本</h2>
+          <p class="card-desc">
             以老師的課堂內容改寫而成的小冊，從日常切入歷史，輕鬆卻有深度。
           </p>
-          <div class="product-meta">自編教材｜示意品項</div>
+          <div class="card-meta">自編教材｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 7 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 7" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 7" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">靜靜喝茶閱讀組</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">靜靜喝茶閱讀組</h2>
+          <p class="card-desc">
             書籍搭配簡單茶包的小組合，適合帶回家重現讀書館的一個下午。
           </p>
-          <div class="product-meta">組合商品｜示意品項</div>
+          <div class="card-meta">組合商品｜示意品項</div>
         </div>
       </article>
 
       <!-- 商品 8 -->
-      <article class="product-card">
-        <div class="product-image-wrapper">
-          <img src="pic/02-01.jpg" alt="商品示意圖 8" />
+      <article class="card">
+        <div class="card-image-wrapper">
+          <img src="pic/01-01.jpg" alt="商品示意圖 8" />
         </div>
-        <div class="product-body">
-          <h2 class="product-title">小城夜讀明信片</h2>
-          <p class="product-desc">
+        <div class="card-body">
+          <h2 class="card-title">小城夜讀明信片</h2>
+          <p class="card-desc">
             以書店一隅為概念設計的明信片組，可以寄給朋友，也可以自己收藏。
           </p>
-          <div class="product-meta">明信片｜示意品項</div>
+          <div class="card-meta">明信片｜示意品項</div>
         </div>
       </article>
     </section>

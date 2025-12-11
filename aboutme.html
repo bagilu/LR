@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>林榮讀書館｜關於我</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="林榮讀書館關於我與聯絡資訊：地址、開放時間與空間簡介。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">林榮讀書館</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">首頁 Home</a></li>
+          <li><a href="product.html">商品 Product</a></li>
+          <li><a href="knowledge.html">知識分享 Knowledge</a></li>
+          <li><a href="aboutme.html">關於我 About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主內容 -->
+  <main>
+    <h1 class="page-title">關於林榮讀書館</h1>
+    <p class="page-subtitle">
+      一個從住家一樓開始的小讀書館，慢慢長成和大家共享的閱讀空間。
+    </p>
+
+    <section class="about-layout">
+      <div class="about-text">
+        <p>
+          林榮讀書館是一位退休大學老師，把家中的一樓整理出來，做成的小型閱讀空間。書架上有來自 1970 年代的老書，也有近年出版的新書，主題多半圍繞在科學、歷史、文學與小說。
+        </p>
+        <p>
+          這裡不是大型書店，也不是正式圖書館，而是介於兩者之間的一個安靜角落：有人來翻翻書、寫寫字、發發呆，偶爾也聊一聊關於教學、研究與生活的想法。空間維持簡單與乾淨，一切都以「可以好好讀一本書」為優先。
+        </p>
+        <p>
+          為了讓運作可以長久一點，讀書館目前採「預約制」，並酌收座位費，提供簡單茶水。未來也希望透過數位教材、講座與文創小物，讓知識在生活中持續發揮價值。
+        </p>
+
+        <div class="info-block">
+          <div class="info-row">
+            <span class="info-label">館名</span>
+            <span>林榮讀書館</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">地址</span>
+            <span>花蓮市林榮街 61 號</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">開放時間</span>
+            <span>暫時為預約制（請事先聯絡館主）</span>
+          </div>
+        </div>
+
+        <p class="note">
+          ※ 目前為小規模個人空間，尚未全面對外開放，一切以預約回覆與現場公告為準。
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="pic/01-01.jpg" alt="林榮讀書館空間一隅示意圖" />
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    © <span id="year"></span> 林榮讀書館 Lin Rong Reading Room. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
