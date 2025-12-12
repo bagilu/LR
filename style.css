@@ -320,6 +320,6 @@ nav li a:hover {
 
 /* 商品卡片圖片細黑框 */
 .card-image-wrapper img {
-  border: 1px solid rgba(0, 0, 0, 0.6); /* 細黑線 */
+  border: 1px solid rgba(60, 50, 40, 0.6); /* 帶咖啡色調 */
 }
 
