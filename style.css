@@ -317,9 +317,3 @@ nav li a:hover {
     padding: 8px 16px;
   }
 }
-
-/* 商品卡片圖片細黑框 */
-.card-image-wrapper img {
-  border: 1px solid rgba(60, 50, 40, 0.6); /* 帶咖啡色調 */
-}
-
