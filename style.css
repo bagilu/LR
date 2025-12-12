@@ -294,3 +294,27 @@ footer {
     font-size: 16px;
   }
 }
+
+/* 導覽列按鈕化 */
+nav li a {
+  padding: 6px 14px;
+  border-radius: 999px;              /* 橢圓形 */
+  background-color: #5c4a3d;         /* 深咖啡色 */
+  color: #f6f1e7;                    /* 米白文字 */
+  font-size: 13px;
+  line-height: 1;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+nav li a:hover {
+  background-color: #3f322a;   /* 再深一點 */
+  text-decoration: none;       /* 移除底線 */
+  transform: translateY(-1px); /* 非必要，但手感很好 */
+}
+
+@media (max-width: 480px) {
+  nav li a {
+    padding: 8px 16px;
+  }
+}
+
