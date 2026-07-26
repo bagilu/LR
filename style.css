@@ -295,25 +295,93 @@ footer {
   }
 }
 
-/* 導覽列按鈕化 */
-nav li a {
-  padding: 6px 14px;
-  border-radius: 999px;              /* 橢圓形 */
-  background-color: #5c4a3d;         /* 深咖啡色 */
-  color: #f6f1e7;                    /* 米白文字 */
+/* Podcast 目錄：延續原站暖色、留白與紙張質感 */
+.podcast-toolbar {
+  background: #fbf7f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.podcast-toolbar label { font-size: 14px; color: #6b5544; }
+.podcast-toolbar select {
+  min-width: 220px;
+  border: 1px solid #d8cbbd;
+  border-radius: 7px;
+  background: #fffdf9;
+  color: #3b2f2f;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.load-status { color: #8a7462; font-size: 13px; margin: 12px 0 18px; }
+.error-message { color: #9a3f31; }
+.podcast-list { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+.podcast-card,
+.podcast-detail-card,
+.transcript-section {
+  background: #fbf7f0;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.podcast-card { padding: 18px 20px; border-left: 4px solid #b9a28b; }
+.podcast-number { color: #a08b78; font-size: 12px; letter-spacing: 0.08em; }
+.podcast-title { font-size: 18px; line-height: 1.5; margin: 4px 0 6px; }
+.podcast-desc { color: #6b5544; font-size: 14px; margin: 0 0 8px; }
+.podcast-meta { color: #8a7462; font-size: 12px; }
+.podcast-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+
+.podcast-link,
+.back-link,
+.pagination button {
+  display: inline-block;
+  border: 1px solid #b9a28b;
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: #5d493a;
+  background: #fffaf3;
   font-size: 13px;
-  line-height: 1;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  line-height: 1.4;
 }
+.podcast-link:hover,
+.back-link:hover,
+.pagination button:hover:not(:disabled) { background: #efe4d5; text-decoration: none; }
+.podcast-pending { color: #a08b78; font-size: 12px; }
 
-nav li a:hover {
-  background-color: #3f322a;   /* 再深一點 */
-  text-decoration: none;       /* 移除底線 */
-  transform: translateY(-1px); /* 非必要，但手感很好 */
+.pagination {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #6b5544;
+  font-size: 13px;
 }
+.pagination button { cursor: pointer; font-family: inherit; }
+.pagination button:disabled { opacity: 0.45; cursor: not-allowed; }
+.empty-state { padding: 24px; border: 1px dashed #ccbba9; border-radius: 10px; color: #8a7462; text-align: center; }
 
-@media (max-width: 480px) {
-  nav li a {
-    padding: 8px 16px;
-  }
+.back-link { margin-bottom: 18px; }
+.podcast-detail-card { padding: 24px; margin-bottom: 24px; }
+.podcast-detail-title { font-size: 28px; line-height: 1.5; margin: 5px 0 8px; }
+.podcast-detail-desc { color: #6b5544; margin: 0 0 10px; }
+.transcript-section { padding: 24px; }
+.transcript-section h2 { font-size: 21px; letter-spacing: 0.12em; margin-top: 0; }
+.transcript-text { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 2; text-align: justify; color: #44372f; }
+
+@media (min-width: 760px) {
+  .podcast-card { display: grid; grid-template-columns: 92px 1fr; column-gap: 18px; }
+  .podcast-card .podcast-number { grid-row: 1 / span 4; padding-top: 5px; }
+  .podcast-card .podcast-title,
+  .podcast-card .podcast-desc,
+  .podcast-card .podcast-meta,
+  .podcast-card .podcast-actions { grid-column: 2; }
 }

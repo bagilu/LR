@@ -1,0 +1,1 @@
+ALTER TABLE public."TblLRPodcastEpisode" ENABLE ROW LEVEL SECURITY;

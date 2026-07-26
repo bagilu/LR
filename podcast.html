@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>Podcast 逐字稿｜林榮讀書館</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="林榮讀書館 Podcast 單集介紹與完整逐字稿。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">林榮讀書館</div>
+      <nav><ul>
+        <li><a href="index.html">首頁 Home</a></li>
+        <li><a href="product.html">商品 Product</a></li>
+        <li><a href="knowledge.html">知識分享 Knowledge</a></li>
+        <li><a href="aboutme.html">關於我 About Me</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main>
+    <p id="podcast-detail-status" class="load-status" role="status">正在載入本集內容……</p>
+    <div id="podcast-content"></div>
+  </main>
+
+  <footer>© <span id="year"></span> 林榮讀書館 Lin Rong Reading Room. All rights reserved.</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/podcast.js"></script>
+</body>
+</html>
